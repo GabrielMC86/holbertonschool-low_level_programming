@@ -1,8 +1,8 @@
 #include<stdio.h>
-/**
- * main - function that prints size of various types
- * Return : 0
- */
+**
+* main - function prints the required text and returns 0
+* Return: 0
+*/
 int main(void)
 {
 char c;
