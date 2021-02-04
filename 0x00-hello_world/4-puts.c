@@ -1,15 +1,12 @@
 #include<stdio.h>
-/*
- * puts - prints a string
- * @char - contains string 
+/**
+ * main - print a string
+ * puts : prints a string
  * Return: 0
  */
 
 int main(void)
 {
-	char s[] = "Programming is like building a multilingual puzzle";
-
-	puts(s); 
-
+	puts("\"Programming is like building a multilingual puzzle");
 	return (0);
 }
