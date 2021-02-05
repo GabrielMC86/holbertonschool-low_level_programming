@@ -13,9 +13,9 @@ int main(void)
 	while (z <= '9')
 	{
 		putchar(z);
-
-		z = z + 1;
+		z++;
 	}
-		
-	putchar('\n');
+		putchar('\n');
+
+		return (0);
 }

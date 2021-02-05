@@ -15,5 +15,10 @@ int main(void)
 		printf("%d", s);
 		s = s + 1;
 	}
+
+	{
 		printf("\n");
+	}
+
+	return (0);
 }
