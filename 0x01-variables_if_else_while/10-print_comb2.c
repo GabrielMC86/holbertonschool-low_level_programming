@@ -6,23 +6,26 @@
  */
 int main(void)
 {
-	int up; 
+	int up;
 
-	for (up = '00'; up <= '99'; up++) 
+	for (up = '0'; up <= '9'; up++)
 	{
 		putchar(up);
 	}
-		if (up <= '99')
+	for (up = '0'; up <= '9'; up++)
+
+		if (up <= '9')
 		{
 		putchar(',');
 		}
-		
-		if (up <= '99') 
+
+		if (up <= '9')
 		{
 		putchar(' ');
 		}
-	
+	}
 		putchar('\n');
 
+		return (0);
 }
 

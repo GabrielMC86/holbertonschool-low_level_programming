@@ -8,13 +8,14 @@ int main(void)
 {
 	int z;
 
-	z = 0;
+	z = '0';
 
-	while (z <= 9)
+	while (z <= '9')
 	{
 		putchar(z);
 
 		z = z + 1;
 	}
-		putchar('\n');
+		
+	putchar('\n');
 }
