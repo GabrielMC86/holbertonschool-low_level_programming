@@ -1,7 +1,7 @@
 #include<stdio.h>
 /**
  * main - display 3 digits in ascending order, no combination
- * int: type var used 
+ * int: type var used
  * Return: 0
  */
 int main(void)
@@ -18,15 +18,15 @@ int main(void)
 				putchar(b);
 				putchar(c);
 
-				if ( a <= '6')
+				if (a <= '6')
 				{
 					putchar(',');
 					putchar(' ');
 				}
 
-			}	
+			}
 		}
-	}	
+	}
 	putchar('\n');
 	return (0);
 }
