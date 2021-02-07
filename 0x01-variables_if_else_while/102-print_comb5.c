@@ -23,8 +23,8 @@ int main(void)
 
 				if (a <= 97)
 				{
-					putchar(' ');
 					putchar(',');
+					putchar(' ');
 				}
 
 			}
