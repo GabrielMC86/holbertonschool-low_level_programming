@@ -1,15 +1,15 @@
 #include "holberton.h"
 /**
- * main - print 10x alphabet using own header and function
+ * print_alphabet_x10 - display alphabet using own header and function
  * int - type of var used
- * Return: 0
+ * Return: void
  */
 void print_alphabet_x10(void)
 {
 	char al;
 	int i;
 
-	for (i = 0; i <= 10; i++)
+	for (i = 0; i <= 9; i++)
 	{
 
 		for (al = 'a'; al <= 'z'; al++)
