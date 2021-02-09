@@ -6,8 +6,8 @@
  */
 int main(void)
 {
-	char hp[9] = "Holberton";
-
+	char hp[10] = "Holberton";
+	
 	int i;
 
 	for (i = 0; i <= 9; i++)
