@@ -1,17 +1,17 @@
 #include "holberton.h"
 /**
- * main - confirm if character is lowercase
- * int: type var used
+ * _islower - confirm if character is lowercase
+ * @c: type var used
  * Return: 0
  */
 int _islower(int c)
 {
-		
-	if (c == 97 && c < 123)
+
+	if (c >= 97 && c <= 122)
 	{
 		return (1);
 	}
-	else 
+	else
 	{
 		return (0);
 	}
