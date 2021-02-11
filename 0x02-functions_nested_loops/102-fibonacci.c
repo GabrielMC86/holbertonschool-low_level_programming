@@ -19,7 +19,7 @@ int main(void)
 		printf("%li", fnext);
 		if (count != 49)
 		{
-			printf(",");
+			printf(", ");
 		}
 		f1 = f2;
 		f2 = fnext;
