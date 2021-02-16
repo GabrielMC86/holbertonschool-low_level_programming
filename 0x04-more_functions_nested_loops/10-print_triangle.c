@@ -1,4 +1,4 @@
-#include "holberton.h" 
+#include "holberton.h"
 /**
  * print_triangle - display triangle of # and ' '<space>
  * @size: variable
@@ -24,7 +24,7 @@ void print_triangle(int size)
 					_putchar('#');
 				}
 			}
-			_putchar('\n');	
+			_putchar('\n');
 		}
 	}
 
