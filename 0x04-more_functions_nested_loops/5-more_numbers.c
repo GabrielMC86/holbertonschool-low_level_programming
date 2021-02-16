@@ -5,29 +5,17 @@
  */
 void more_numbers(void)
 {
+	int i;
+	int c;
 
-	int row;
-	int columns;
-
-	row = 0;
-
-	while (row <= 9)
-	{
-		columns = 0;
-		while (columns <= 14)
+	for (i = 0; i < 10; i++)
+	{ 
+		for (c = 0; c <= 14; c++) 
 		{
-			if (columns > 9)
-			{
-				_putchar((columns / 10) + '0');
-				_putchar((columns % 10) + '0');
-			}
-			else if (columns < 9)
-			{
-				_putchar(columns + '0');
-			}
-			columns++;
-		}
-		row++;
+			if (c > 9) 
+				_putchar(c / 10 + '0');
+			_putchar(c % 10 + '0');
+		}	
 		_putchar('\n');
 	}
 }
