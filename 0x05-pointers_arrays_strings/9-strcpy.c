@@ -1,7 +1,8 @@
 #include "holberton.h"
 /**
- * *_strcpy - copy string 
+ **_strcpy - copy string
  * @src: variable pointer
+ * @dest: variable pointer
  * Return: char
  */
 char *_strcpy(char *dest, char *src);
@@ -13,7 +14,6 @@ char *_strcpy(char *dest, char *src);
 		*(dest + x) = *(src + x);
 		x++;
 	}
-	
 	*(dest + 1) = '\0';
 return (dest);
 }
