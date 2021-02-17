@@ -10,12 +10,11 @@ void puts2(char *str)
 
 	skip = 0;
 
-	while (*(str + 1))
+	while (str[skip] != '\0')
 	{
-		_putchar(*(str + skip - 2));
+		if (skip % 2 == 0)
+		_putchar(*(str + skip));
 		skip++;
-		str++;
 	}
-
 	_putchar('\n');
 }
