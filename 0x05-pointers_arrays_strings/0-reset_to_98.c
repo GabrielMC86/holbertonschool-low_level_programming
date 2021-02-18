@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdio.h>
 /**
  * reset_to_98 - update parameter to 98
  * @n: variable
@@ -7,4 +8,5 @@
 void reset_to_98(int *n)
 {
 	*n = 98;
+
 }
