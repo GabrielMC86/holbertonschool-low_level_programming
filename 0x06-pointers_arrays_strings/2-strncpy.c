@@ -1,15 +1,19 @@
 #include "holberton.h"
 /**
- *
+ * _strncpy - copies a string
+ * @dest: where string is going to be copied
+ * @src: string to be copied
+ * @n: parameter
+ * Return: dest
  */
 char *_strncpy(char *dest, char *src, int n)
 {
-	int size_of i;
+	int cpy;
 
-	for (i = 0; i < n && src[i] != '\0'; i++)
-		dest[i] = src[i];
-	for ( ; i < n; i++)
-		dest[i] = '\0';
+	for (cpy = 0; cpy < n && src[cpy] != '\0'; cpy++)
+		dest[cpy] = src[cpy];
+	for ( ; cpy < n; cpy++)
+		dest[cpy] = '\0';
 
-	return dest;
+	return (dest);
 }
