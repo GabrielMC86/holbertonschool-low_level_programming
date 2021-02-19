@@ -2,7 +2,7 @@
 /**
  * reverse_array - function that reverses content of array
  * @a: pointer variable
- * @b: pointer variable 
+ * @n: elements in array
  * Return: void
  */
 void reverse_array(int *a, int n)
