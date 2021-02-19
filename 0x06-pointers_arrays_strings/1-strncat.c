@@ -1,9 +1,10 @@
 #include "holberton.h"
 /**
- * _strncpy - concatenates two strings
+ * _strncat - concatenates two strings
  * @dest: string to be concatenated
  * @src: string that modifies dest
  * @n: paramenter checking len
+ * Return: concatenated string
  */
 char *_strncat(char *dest, char *src, int n)
 {
@@ -12,11 +13,16 @@ char *_strncat(char *dest, char *src, int n)
 
 	for (len = 0; len < n && src[len] != '\0'; len++)
 		dest[dest_len + len] = src[len];
-	
+
 	dest[dest_len + len] = '\0';
 
 	return (dest);
 }
+/**
+ * _strlen - gives out lenght of string
+ * @s: pointer variable
+ * Return: lenght of string
+ */
 int _strlen(char *s)
 {
 	int len = 0;
