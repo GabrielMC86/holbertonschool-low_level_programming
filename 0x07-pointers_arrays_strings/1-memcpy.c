@@ -1,9 +1,9 @@
 #include "holberton.h"
 /**
  * _memcpy - copies memory with a constant byte
- * @n: number of memory to be copy 
+ * @n: number of memory to be copy
  * @dest: where memory is to be allocated
- * @src: pointer where mem to be copied 
+ * @src: pointer where mem to be copied
  * Return: pointer dest
  */
 char *_memcpy(char *dest, char *src, unsigned int n)
