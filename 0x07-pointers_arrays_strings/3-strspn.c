@@ -1,13 +1,12 @@
-#include "holberton.h" 
+#include "holberton.h"
 /**
  * _strspn - get lenght of prefix string
  * @s: pointer varaible
- * @accept: variable 
+ * @accept: variable
  * Return: number of bytes
  */
- unsigned int _strspn(char *s, char *accept)
+unsigned int _strspn(char *s, char *accept)
 {
-	
 	int abc;
 	int xyz;
 
@@ -22,7 +21,6 @@
 
 			}
 		}
-	
 	}
 return (abc);
 }
