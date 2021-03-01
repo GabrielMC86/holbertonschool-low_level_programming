@@ -4,14 +4,14 @@
 /**
  * main - print string arguments
  * @argc: variable counter
- * @argv: pointer variable 
+ * @argv: pointer variable
  * Return: string argunents
  */
-int main (int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	int string;
 	(void)argc;
-	
+
 	string = 0;
 
 	while (string < argc)
