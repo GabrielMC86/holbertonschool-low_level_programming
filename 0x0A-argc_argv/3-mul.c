@@ -5,25 +5,18 @@
  * main - promgram that multiplies two integers using argc/argv
  * @argc: variable argument count
  * @argv: pointer variable to argument
- * Returns: result from multiplication
+ * Return: result from multiplication
  */
 int main(int argc, char *argv[])
 {
 	int mul = 0;
-	int result;
 
 	if (argc > 1)
 	{
-			for (result = 0; result < argc; argv[result]++);
-			{
-				mul = mul * atoi(argv[result]);
-				printf("%d\n", mul); 
-			}
-	}		
-	else if (argc < 1)
-	{
-			printf("Error\n");
-			return (1);
+		mul = atoi(argv[1]) * atoi(argv[2]);
+		printf("%d\n", mul);
+		return (0);
 	}
-return (0);
+	printf("Error\n");
+	return (1);
 }
