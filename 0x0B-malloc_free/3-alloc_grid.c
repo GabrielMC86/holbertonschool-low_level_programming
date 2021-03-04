@@ -1,9 +1,9 @@
-#include "holberton.h" 
-#include <stdlib.h> 
+#include "holberton.h"
+#include <stdlib.h>
 /**
- * **alloc_grid - write a function that returns a pointer to a 2 dimensional array of integers
- * @width: 
- * @height:
+ * alloc_grid - function that returns pointer to a 2-D array of integers
+ * @width: number or row to print
+ * @height: number of column to print
  * return: pointer
  */
 int **alloc_grid(int width, int height)
@@ -20,4 +20,5 @@ int **alloc_grid(int width, int height)
 		dimension[count] = malloc(height * sizeof(int));
 	}
 return (dimension);
+free(dimension);
 }
