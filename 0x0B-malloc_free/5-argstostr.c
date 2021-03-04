@@ -24,7 +24,6 @@ char *argstostr(int ac, char **av)
 		{
 			;
 		}
-		result = 0;
 		result += sindex + 1;
 	}
 
