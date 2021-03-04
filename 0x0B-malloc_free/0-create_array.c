@@ -5,17 +5,17 @@
  * @size: is the size of the array
  * @c: the specific character
  * return: a pointer or NULL if it fails
- * */
+ */
 char *create_array(unsigned int size, char c)
 {
-	char * aray;
+	char *aray;
 	unsigned int index;
 
 	if (size == 0)
-	{	
+	{
 		return (0);
 	}
-	aray = malloc(sizeof(* aray) * size);
+	aray = malloc(sizeof(* aray) *size);
 
 	if (aray == 0)
 	{
