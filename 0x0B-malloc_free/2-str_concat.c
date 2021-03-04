@@ -23,7 +23,7 @@ char *str_concat(char *s1, char *s2)
 	for (lenght_2 = 0; s2[lenght_2] != '\0'; lenght_2++)
 		;
 
-	sum_lenghts = lenght + lenght_2 + 1;
+	sum_lenghts = ((lenght + lenght_2) + 1);
 	new_str = malloc(sum_lenghts * sizeof(char));
 
 	if (new_str == '\0')
