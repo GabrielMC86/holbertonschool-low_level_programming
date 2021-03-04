@@ -3,16 +3,16 @@
 #include <stdlib.h>
 
 /**
- * _strdup - returns a pointer to a new string 
- * @str: pointer to string 
- * return: a pointer 
+ * _strdup - returns a pointer to a new string
+ * @str: pointer to string
+ * Return: a pointer
  */
 char *_strdup(char *str)
 {
 	char *ch;
 	int x;
 
-	if (str == 0) 
+	if (str == 0)
 	{
 		return (0);
 	}
@@ -23,7 +23,7 @@ char *_strdup(char *str)
 	}
 	ch = malloc(x * sizeof(char) + 1);
 
-	if (ch == 0)  
+	if (ch == 0)
 	{
 		return (0);
 	}
@@ -32,5 +32,5 @@ char *_strdup(char *str)
 		ch[x] = str[x];
 	}
 	return (ch);
-	free (ch);
+	free(ch);
 }
