@@ -12,19 +12,22 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	char *new_str;
 	unsigned int lenght = _strlen(s1);
 	unsigned int lenght2 = _strlen(s2);
-	unsigned int ctr;
+	unsigned int ctr, sum_str;
 
+	
 	if (s1 == 0)
-		s1 = "";
+		s1 = NULL;
 	
 	if (s2 == 0)
-		s2 = "";
+		s2 = NULL;
 	
-	if (lenght2 > n)              
-		lenght2 = n;
+	if (n >= length2)              
+		sum_str = lenght + lenght2;
+	else 
+		sum_str = lenght + n;
 			
 
-	new_str = malloc(sizeof(char) * (lenght + lenght2 + 1));
+	new_str = malloc(sizeof(char) * (sum_str + 1));
 
 	if (new_str == NULL)
 		return (0);
