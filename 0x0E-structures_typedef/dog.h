@@ -9,7 +9,7 @@ typedef struct dog dog_t;
  * @owner: pointer variable
  * Return: void
  */
- struct dog
+struct dog
 {
 	char *name;
 	float age;
@@ -21,4 +21,5 @@ void print_dog(struct dog *d);
 dog_t *new_dog(char *name, float age, char *owner);
 int _strlen(char *s);
 char *_strcpy(char *dest, char *src);
+void free_dog(dog_t *d);
 #endif
