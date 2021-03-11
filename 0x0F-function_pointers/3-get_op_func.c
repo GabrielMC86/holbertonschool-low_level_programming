@@ -1,8 +1,8 @@
-#include "calc.h"
+#include "3-calc.h"
 /**
  * get_op_func - functions that selects the correct function to perform the operation
  * @s: pointers to character
- * 
+ *
  * Return:
  */
 int (*get_op_func(char *s))(int, int)
@@ -20,7 +20,7 @@ int (*get_op_func(char *s))(int, int)
 
 	while (ops[i].op != NULL)
 	{
-		if (strcmp(s, ops[i].op == 0)
+		if (strcmp(s, ops[i].op) == 0)
 			{
 				return (ops[i].f);
 			}
