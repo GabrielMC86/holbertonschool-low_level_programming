@@ -61,7 +61,7 @@ void print_all(const char * const format, ...)
 
 	va_start(listado, format);
 
-	while (format[x] != '\0')
+	while (format != NULL && format[x] != '\0')
 	{
 		v = 0;
 		while (fmto[v].op != NULL)
