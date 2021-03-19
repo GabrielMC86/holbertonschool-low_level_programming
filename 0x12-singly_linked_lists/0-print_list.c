@@ -1,4 +1,4 @@
-#include "lists.h" 
+#include "lists.h"
 /**
  * print_list - Prints all the elements of a list
  * @h: pointer to structure
@@ -8,11 +8,11 @@ size_t print_list(const list_t *h)
 {
 	int idx;
 
-	
+
 	idx = 0;
-	while(h != NULL)
+	while (h != NULL)
 	{
-		if(h->str == NULL)
+		if (h->str == NULL)
 		{
 			printf("[0] (nil)\n");
 		}
@@ -23,5 +23,5 @@ size_t print_list(const list_t *h)
 		idx++;
 		h = h->next;
 	}
-return(idx);
+return (idx);
 }
