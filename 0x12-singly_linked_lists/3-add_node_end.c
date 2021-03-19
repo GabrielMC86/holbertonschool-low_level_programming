@@ -38,7 +38,7 @@ list_t *add_node_end(list_t **head, const char *str)
 		lnode = lnode->next;
 		}
 	}
-		lnode->next = copy;
+	lnode->next = copy;
 
 	return (lnode);
 }
