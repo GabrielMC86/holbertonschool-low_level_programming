@@ -29,6 +29,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	if (*head == NULL)
 	{
 		*head = copy;
+		return (copy);
 	}
 	else
 	{
@@ -40,7 +41,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	}
 	lnode->next = copy;
 
-	return (lnode);
+	return (copy);
 }
 /**
  * _strlen - gives out the lenght of string
