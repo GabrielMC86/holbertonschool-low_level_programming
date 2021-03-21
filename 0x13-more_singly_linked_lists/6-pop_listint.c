@@ -17,8 +17,8 @@ int pop_listint(listint_t **head)
 	else
 	{
 		to_Delete = *head;
-		*head = to_Delete->next;
 		data = to_Delete->n;
+		*head = to_Delete->next;
 
 		free(to_Delete);
 	}
