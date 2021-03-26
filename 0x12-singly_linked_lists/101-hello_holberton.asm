@@ -1,10 +1,16 @@
-global    main
-          extern    puts
+ global main
+        ;;  fileName: hw64.asm
+        ;;  Minimal example invoking a system function (64 bits)
+        section .data
+message:        db 'Hello, Holberton', 10
 
-          section   .text
-main:                                       ; This is called by the C library startup code
-          mov       rdi, message            ; First integer (or pointer) argument in rdi
-          call      puts                    ; puts(message)
-          ret                               ; Return from main back into C library wrapper
-message:
-          db        "Hello, Holberton", 0        ; Note strings must be terminated with 0 in C
+        section .text
+main:
+            mov rax, 1          ; rax = 1 for the write syscall
+            mov rdi, 1          ; rdi = 1, filedescriptor stdout
+            mov rsi, message    ; rsi = address of the string
+            mov rdx, 17         ; rdx = length of the string
+            syscall             ; make the system call
+            mov rax, 60         ; use the _exit syscall
+            xor rdi, rdi        ; exit code 0
+            syscall             ; make syscall
