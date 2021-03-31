@@ -14,13 +14,20 @@ int create_file(const char *filename, char *text_content)
 	if (fdescript == -1)
 		return (-1);
 
-	if (*text_content == -1)
-		text_content = "";
+	if (text_content == NULL)
+	{
 
+		fdescript = (open(filename, O_CREAT, 0600));
+		if (fdescript == -1)
+			return (-1);
+	
+	return (1);
+	}
+	
 	for (count = 0; text_content[count] != '\0'; count++)
 		;
 
-	mask_write = write(fdescript, text_content, text_content[count]);
+	mask_write = write(fdescript, text_content, count);
 
 	if (mask_write == -1)
 		return (-1);
