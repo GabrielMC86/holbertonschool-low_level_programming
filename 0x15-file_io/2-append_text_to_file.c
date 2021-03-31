@@ -20,7 +20,7 @@ int append_text_to_file(const char *filename, char *text_content)
 	for (count = 0; text_content[count] != '\0'; count++)
 		;
 
-	mask_write = write(fdescript, text_content, text_content[count]);
+	mask_write = write(fdescript, text_content, count);
 
 	if (mask_write == -1)
 		return (-1);
