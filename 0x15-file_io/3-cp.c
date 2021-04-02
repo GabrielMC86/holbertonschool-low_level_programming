@@ -1,5 +1,11 @@
 #include "holberton.h"
-
+/**
+ * error_fd - functioin for switch cases
+ * @fd: file descriptor variable
+ * @str: pointer to argv
+ * @error: list of cases
+ * Return: 0 if success, else exit on error
+ */
 
 int error_fd(int error, char *str, int fd)
 {
@@ -34,35 +40,34 @@ switch (error)
  */
 int main(int argc, char *argv[])
 {
-	int Read, Write, _1_cp, _2_paste;
+	int Read, Write, copy, paste;
 	char *buff[1024];
 
 	if (argc != 3)
 		error_fd(97, 0, 0);
 
-	_1_cp = (open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664));
-	error_fd(99, argv[2], 0);
+	copy = open(argv[1], O_RDONLY);
 
-	if (_1_cp == -1)
+	if (copy == -1)
+		error_fd(98, argv[1], 0);
+
+	paste = (open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664));
+
+	if (paste == -1)
 		error_fd(98, argv[2], 0);
 
-	_2_paste = open(argv[1], O_RDONLY);
-
-	if (_2_paste == -1)
-		error_fd(98, argv[2], 0);
-
-	while ((Read = read(_1_cp, buff, 1024)) != 0)
+	while ((Read = read(copy, buff, 1024)) != 0)
 	{
 		if (Read == -1)
 			error_fd(98, argv[1], 0);
 	}
 
-	Write = (write(_2_paste, buff, Read));
+	Write = (write(paste, buff, Read));
 
 	if (Write == -1)
 		error_fd(99, argv[2], 0);
 
-	close(_1_cp) == -1 ? (error_fd(100, argv[1], _1_cp)) : close(_1_cp);
-	close(_2_paste) == -1 ? (error_fd(100, argv[2], _2_paste)) : close(_2_paste);
+	close(copy) == -1 ? (error_fd(100, argv[1], copy)) : close(copy);
+	close(paste) == -1 ? (error_fd(100, argv[2], paste)) : close(paste);
 	return (0);
 }
