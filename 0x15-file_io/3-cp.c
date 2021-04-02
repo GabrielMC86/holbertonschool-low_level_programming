@@ -28,7 +28,7 @@ switch (error)
 		exit(100);
 
 	default:
-			return (0);
+		return (0);
 	}
 }
 /**
@@ -44,29 +44,28 @@ int main(int argc, char *argv[])
 	char *buff[1024];
 
 	if (argc != 3)
-		error_fd(97, 0, 0);
+		error_fd(97, NULL, 0);
 
 	copy = open(argv[1], O_RDONLY);
 
 	if (copy == -1)
 		error_fd(98, argv[1], 0);
 
-	paste = (open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664));
+	paste = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
 	if (paste == -1)
-		error_fd(98, argv[2], 0);
+		error_fd(99, argv[2], 0);
 
 	while ((Read = read(copy, buff, 1024)) != 0)
 	{
-		if (Read == -1)
-			error_fd(98, argv[1], 0);
+			if (Read == -1)
+				error_fd(98, argv[1], 0);
+	
+		Write = write(paste, buff, Read);
+
+		if (Write == -1)
+			error_fd(99, argv[2], 0);
 	}
-
-	Write = (write(paste, buff, Read));
-
-	if (Write == -1)
-		error_fd(99, argv[2], 0);
-
 	close(copy) == -1 ? (error_fd(100, argv[1], copy)) : close(copy);
 	close(paste) == -1 ? (error_fd(100, argv[2], paste)) : close(paste);
 	return (0);
